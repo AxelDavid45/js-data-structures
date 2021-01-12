@@ -1,0 +1,23 @@
+{
+  "name": "data-structures-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelDavid45/js-data-structures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AxelDavid45/js-data-structures/issues"
+  },
+  "homepage": "https://github.com/AxelDavid45/js-data-structures#readme",
+  "dependencies": {
+    "standard": "^16.0.3"
+  }
+}
