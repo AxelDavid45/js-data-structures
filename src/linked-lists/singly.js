@@ -12,11 +12,23 @@ class SinglyLinkedList {
     this.length = 1
   }
 
-  append (node) {
+  append (value) {
+    const node = new Node(value)
     this.tail.next = node
+    this.tail = node
     this.length++
+    return this
+  }
+
+  prepend (value) {
+    const node = new Node(value)
+    node.next = this.head
+    this.head = node
+    this.length++
+    return this
   }
 }
 
 const node1 = new Node(1)
 const list = new SinglyLinkedList(node1)
+console.log(list)
