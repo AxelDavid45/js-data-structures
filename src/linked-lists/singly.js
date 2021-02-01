@@ -27,6 +27,31 @@ class SinglyLinkedList {
     this.length++
     return this
   }
+
+  insert (position, value) {
+    console.time('insertMethod')
+    if (position > this.length) {
+      this.append(value)
+      return true
+    }
+    const node = new Node(value)
+    let currentNode = this.head
+    let previousNode = this.head
+    let counter = 0
+
+    while (currentNode.next !== null) {
+      if (counter === position - 1) {
+        node.next = currentNode.next.next
+        previousNode = currentNode
+        previousNode.next = node
+        this.length++
+        console.timeEnd('insertMethod')
+        return this
+      }
+      currentNode = currentNode.next
+      counter++
+    }
+  }
 }
 
 const node1 = new Node(1)
